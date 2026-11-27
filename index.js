@@ -13,7 +13,6 @@
 //     'D-': 0.7,
 //     'F': 0.0
 // };
-let name = 'ertyu'
 const gradePoints = {
     'A+': 5.0,
     'A': 4.5,
@@ -172,7 +171,7 @@ document.getElementById('add-course').addEventListener('click', () => {
 });
 
 // Here is where most of the Events are listened and interated
-courseList.addEventListener('input', updateResults);
+courseList.addEventListener('input', updateResults );
 courseList.addEventListener('change', updateResults);
 courseList.addEventListener('click', event => {
     const removeButton = event.target.closest('.remove-course');
@@ -191,3 +190,6 @@ for (let index = 0; index < 3; index += 1) {
     courseList.appendChild(createCourseRow());
 }
 updateResults();
+
+
+ 

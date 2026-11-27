@@ -1,5 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
+/* Demo */
+#cumulative-gpa{
+    color: #47bf8a;
+}
+
+nav{
+    /* margin-left: 5%; */
+    background: #3858d7;
+    padding-left: 30px;
+}
+
+ 
+
+
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    font-size: 18px;
+    margin-left: -8%;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: rgb(233, 227, 227);
+    /* font-weight: bold; */
+    font-family: fantasy;
+}
+
+ul li a:hover{
+    font-size: 19px;
+    color: rgb(175, 171, 171);
+}
+
+
+/* Demo ends here... */
 :root {
     font-family: 'DM Sans', sans-serif;
     color: #17233c;
@@ -56,8 +97,8 @@ select {
     align-items: center;
 }
 
-.topbar,
-.panel-heading {
+
+.topbar, .panel-heading {
     justify-content: space-between;
 }
 
@@ -84,14 +125,16 @@ select {
 
 .scale-note {
     gap: 8px;
-    color: #6f7e96;
-    font-size: 12px;
+    /* color: #6f7e96; */
+    color: #1b2944;
+    font-size: 15px;
     font-weight: 600;
+    margin-right: 5%;
 }
 
 .status-dot {
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: #47bf8a;
     box-shadow: 0 0 0 3px #e1f6ed;
@@ -167,7 +210,7 @@ h1 {
 .result-heading {
     gap: 8px;
     color: #73819a;
-    font-size: 12px;
+    font-size: 15.5px;
     font-weight: 600;
 }
 
@@ -444,6 +487,25 @@ footer {
     text-align: center;
 }
 
+@media (max-width:670.21px) {
+    .Gradewise{
+        font-size: 17px;
+    }
+    
+    .brand{
+       margin-left: -3%; 
+    }
+
+    ul{
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .scale-note{
+        font-size: 13px;
+    }
+}
+
 @media (max-width: 560px) {
     .app-shell {
         width: min(100% - 28px, 760px);
@@ -522,6 +584,16 @@ footer {
         gap: 11px;
     }
 }
+
+/* @media (max-width:541px) {
+    ul{
+        display: none;
+    }
+
+    .Gradewise{
+        font-size: 19px;
+    }
+} */
 
 @media (max-width: 365px) {
     .course-labels,
