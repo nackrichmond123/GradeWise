@@ -13,6 +13,9 @@
 //     'D-': 0.7,
 //     'F': 0.0
 // };
+
+console.log("Hello World");
+
 const gradePoints = {
     'A+': 5.0,
     'A': 4.5,
