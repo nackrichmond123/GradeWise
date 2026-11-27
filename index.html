@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>Gradewise — GPA Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="Gradewise home">
+                <span class="brand-mark" aria-hidden="true">G</span>
+                <span>Gradewise</span>
+            </a>
+            <span class="scale-note"><span class="status-dot"></span> 5.0 grading scale</span>
+        </header>
+
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">YOUR ACADEMIC SNAPSHOT</p>
+            <h1 id="page-title">Know where you stand.</h1>
+            <p class="intro-copy">Add your courses and grades to instantly calculate your GPA and cumulative GPA.</p>
+        </section>
+
+        <section class="results" aria-label="Calculated grade averages">
+            <article class="result-card result-card-primary">
+                <div class="result-heading">
+                    <span class="result-icon" aria-hidden="true">↗</span>
+                    <span>Semester GPA</span>
+                </div>
+                <p class="result-value" id="semester-gpa" aria-live="polite">—</p>
+                <p class="result-caption" id="semester-caption">Add a graded course to get started</p>
+            </article>
+            <article class="result-card">
+                <div class="result-heading">
+                    <span class="result-icon result-icon-light" aria-hidden="true">◎</span>
+                    <span>Cumulative GPA</span>
+                </div>
+                <p class="result-value" id="cumulative-gpa" aria-live="polite">—</p>
+                <p class="result-caption" id="cumulative-caption">Based on your courses below</p>
+            </article>
+        </section>
+
+        <section class="panel courses-panel" aria-labelledby="courses-title">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">THIS SEMESTER</p>
+                    <h2 id="courses-title">Your courses</h2>
+                </div>
+                <span class="course-count" id="course-count">0 courses</span>
+            </div>
+
+            <div class="course-labels" aria-hidden="true">
+                <span>COURSE NAME <span class="optional">(OPTIONAL)</span></span>
+                <span>GRADE</span>
+                <span>CREDITS</span>
+                <span></span>
+            </div>
+            <div id="course-list" class="course-list"></div>
+            <button type="button" class="add-course-button" id="add-course">
+                <span aria-hidden="true">＋</span> Add a course
+            </button>
+            <p class="form-message" id="form-message" role="status"></p>
+        </section>
+
+        <details class="panel previous-panel">
+            <summary>
+                <span>
+                    <span class="eyebrow">ALREADY HAVE A GPA?</span>
+                    <strong>Add your previous record</strong>
+                </span>
+                <span class="summary-arrow" aria-hidden="true">⌄</span>
+            </summary>
+            <p class="previous-help">Enter your GPA and completed credits from previous semesters to include them in your cumulative GPA. Leave both blank if you’re starting fresh.</p>
+            <div class="previous-fields">
+                <label>
+                    Previous cumulative GPA
+                    <span class="input-with-suffix">
+                        <input id="previous-gpa" type="number" min="0" max="2" step="0.01" placeholder="e.g. 4.45" inputmode="decimal">
+                        <span>/ 4.0</span>
+                    </span>
+                </label>
+                <label>
+                    Completed credits
+                    <span class="input-with-suffix">
+                        <input id="previous-credits" type="number" min="0.01" step="0.01" placeholder="e.g. 30" inputmode="decimal">
+                        <span>credits</span>
+                    </span>
+                </label>
+            </div>
+        </details>
+
+        <footer>
+            Gradewise uses a standard 5.0 scale. Grade-point values can vary by school—check your institution’s grading policy.
+        </footer>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
