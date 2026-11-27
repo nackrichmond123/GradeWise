@@ -13,6 +13,7 @@
 //     'D-': 0.7,
 //     'F': 0.0
 // };
+let name = 'ertyu'
 const gradePoints = {
     'A+': 5.0,
     'A': 4.5,
